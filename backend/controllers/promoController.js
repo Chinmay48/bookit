@@ -30,3 +30,6 @@ const validatePromo = async (req, res) => {
     res.status(500).json({ valid: false, message: "Error validating promo code", error });
   }
 };
+
+
+module.exports={validatePromo}
