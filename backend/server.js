@@ -7,22 +7,8 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const allowedOrigins = [
-  "http://localhost:5173",             // for local development
-  "https://bookit-1-ten.vercel.app"    // your deployed frontend
-];
+app.use(cors());
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
 app.use(express.json());
 
 
