@@ -36,7 +36,7 @@ const Details: React.FC = () => {
     const fetchExperience = async () => {
       try {
         const res = await axios.get<Experience>(
-          `http://localhost:5000/api/experiences/${id}`
+          `https://bookit-yjux.onrender.com/api/experiences/${id}`
         );
         setExperience(res.data);
       } catch (error) {

@@ -21,7 +21,7 @@ const Home: React.FC = () => {
     const fetchExperiences = async () => {
       try {
         const res = await axios.get<Experience[]>(
-          "http://localhost:5000/api/experiences"
+          "https://bookit-yjux.onrender.com/api/experiences"
         );
         setExperiences(res.data);
         setFiltered(res.data);

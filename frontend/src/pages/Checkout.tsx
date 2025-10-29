@@ -35,7 +35,7 @@ const Checkout: React.FC = () => {
 
   try {
     setApplying(true);
-    const response = await axios.post("http://localhost:5000/api/promo/validate", {
+    const response = await axios.post("https://bookit-yjux.onrender.com/api/promo/validate", {
       code: promoCode,
       amount: total,
     });
@@ -64,7 +64,7 @@ const Checkout: React.FC = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("http://localhost:5000/api/bookings", {
+      const response = await axios.post("https://bookit-yjux.onrender.com/api/bookings", {
         experienceId: experience._id,
         name,
         email,
